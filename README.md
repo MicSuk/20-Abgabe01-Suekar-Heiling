@@ -19,5 +19,15 @@ As Michael Häupl said:
     
 ## Relevant Code Sniped:  
 ```java
-                             (needs to be formatted correctly)
+    public void drink(double sipAmount) {
+        double totalVolume = getVolume();
+
+        if(totalVolume < sipAmount) {
+            throw new BringTheSpritzwineException("Too little Volume left!");
+        }
+
+        for (Liquid ingredient : ingredients) {
+            ingredient.setVolume(ingredient.getVolume() - (ingredient.getVolume()/totalVolume * sipAmount));
+        }
+    }
 ```
