@@ -54,7 +54,11 @@ public class Mead extends Drink{
      */
     @Override
     public double getVolume() {
-        return 0;
+        double volume = 0;
+        for (Liquid ingredient : ingredients) {
+            volume += ingredient.getVolume();
+        }
+        return volume;
     }
 
     /**
@@ -64,7 +68,12 @@ public class Mead extends Drink{
      */
     @Override
     public double getAlcoholPercent() {
-        return 0;
+        double totalVolume = getVolume();
+        double alcPercentage = 0;
+        for (Liquid ingredient : ingredients) {
+            alcPercentage += ingredient.getVolume()/totalVolume * ingredient.getAlcoholPercent();
+        }
+        return alcPercentage;
     }
 
     /**
@@ -74,33 +83,42 @@ public class Mead extends Drink{
      */
     @Override
     public boolean isAlcoholic() {
-        return true;
+        return getAlcoholPercent() > 0;
     }
 
     /**
      * A function to drink the Mead
-     * throws exception if Drink is empty.
+     * throws BringTheSpritzwineException if Drink is empty.
      *
      * @param sipAmount the amount you want to drink with one sip in liter.
      *
      */
     public void drink(double sipAmount) {
+        double totalVolume = getVolume();
 
+        if(totalVolume < sipAmount) {
+            throw new BringTheSpritzwineException("Too little Volume left!");
+        }
+
+        for (Liquid ingredient : ingredients) {
+            ingredient.setVolume(ingredient.getVolume() - (ingredient.getVolume()/totalVolume * sipAmount));
+        }
     }
 
     /**
      * Function to add an Ingredient to the mead
-     * @param l
+     * @param l liquid to add
      */
     public void addIngredient(Liquid l) {
-
+        ingredients.add(l);
     }
 
     /**
      * Function to remove an Ingredient to the mead
-     * @param l
+     * @param l Liquid to remove
+     * @return successful
      */
-    public void removeIngredient(Liquid l) {
-
+    public boolean removeIngredient(Liquid l) {
+        return ingredients.remove(l);
     }
 }
