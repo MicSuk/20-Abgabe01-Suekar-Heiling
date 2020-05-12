@@ -8,8 +8,9 @@ Mead.java extends the class SimpleDrink.java. It will use a Collection to vary t
 flavours. For example if you mix mead with water it will have a health promoting
 effect. The class will contain a method that can check if the mead is health promoting
 if its not an exception will be thrown. (OnlySpritzwineIsHealthyException).
+
 As Michael Häupl said:
-> "Man bringe den Spitzwein!"
+> "Man bringe den Spritzwein!"
     
 ## Contributors:
 * Michael Sükar
