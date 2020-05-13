@@ -34,3 +34,17 @@ As Michael Häupl said:
 ```
 
 ## Tests with JUNIT
+
+### Test of `Mead.java` with `MeadTest.java`
+`MeadTest.java`tests all functions and Constructor from `Mead.java`. To reach
+the 100% test coverage we started with the `testConstructor()` to check if the
+setup is correct. After that we move on to test all getter/setter. At least but not
+last we checked the given/selfmade functions. Through out the check the selfmade 
+(BringTheSpritzwineException) is also thrown and checked in `testDrinkWithException()`
+
+
+### Test of `SimpleDrink.java` with `SimpleDrinkTest.java`
+This test file is very similiar to the `LiquidTest.java`, since an instance
+of `SimpleDrink.java` has only one variable, which is an instance of `Liquid.java`
+So since in `Liquid.java` most of the functionallity is tested, we just tested
+the `isAlcoholic()` function. 
