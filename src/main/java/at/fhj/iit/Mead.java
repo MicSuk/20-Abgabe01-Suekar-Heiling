@@ -47,6 +47,15 @@ public class Mead extends Drink{
     }
 
     //-------------------------------------------------------------------Methods
+
+    /**
+     * Getter for the name
+     * @return the name of the mead
+     */
+    public String getName() {
+        return name;
+    }
+
     /**
      * Calculates and returns volume of drink
      *
