@@ -123,11 +123,19 @@ public class Mead extends Drink{
     }
 
     /**
-     * Function to remove an Ingredient to the mead
-     * @param l Liquid to remove
+     * Function to completely remove an Ingredient from the mead
+     * @param ingredientName Ingredient by Name to remove
      * @return successful
      */
-    public boolean removeIngredient(Liquid l) {
-        return ingredients.remove(l);
+    public boolean removeIngredient(String ingredientName) {
+        int index = 0;
+        for (Liquid ingredient : ingredients) {
+            if(ingredient.getName().equalsIgnoreCase(ingredientName)) {
+                ingredients.remove(index);
+                return true;
+            }
+            index++;
+        }
+        return false;
     }
 }
