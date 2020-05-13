@@ -53,6 +53,32 @@
       <timezone>Europe/Vienna</timezone>
       <properties/>
     </developer>
+    <developer>
+      <id>marcoheiling</id>
+      <name>Marco Heiling</name>
+      <email>marco.heiling@edu.campus02.at</email>
+      <url>https://github.com/marcoheiling</url>
+      <organization>CAMPUS 02 Fachhochschule der Wirtschaft GmbH</organization>
+      <organizationUrl>https://www.campus02.at/wirtschaftsinformatik</organizationUrl>
+      <roles>
+        <role>Student</role>
+      </roles>
+      <timezone>Europe/Vienna</timezone>
+      <properties/>
+    </developer>
+    <developer>
+      <id>MicSuk</id>
+      <name>Michael Suekar</name>
+      <email>micheal.suekar@edu.campus02.at</email>
+      <url>https://github.com/MicSuk</url>
+      <organization>CAMPUS 02 Fachhochschule der Wirtschaft GmbH</organization>
+      <organizationUrl>https://www.campus02.at/wirtschaftsinformatik</organizationUrl>
+      <roles>
+        <role>Student</role>
+      </roles>
+      <timezone>Europe/Vienna</timezone>
+      <properties/>
+    </developer>
   </developers>
 
   <properties>
